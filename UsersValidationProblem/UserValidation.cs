@@ -15,12 +15,21 @@ namespace UsersValidationProblem
             Console.WriteLine(result);
         }
         //UC2
-        //LastName the First Letter Should Capital and minimum 3 Characters
+        //LastName the First Letter Should Capital and minimum 3 Character
         public const string LASTNAME_REGEX = "^[A-Z][a-zA-Z]{2}$";
         public void ValidationLastName(string lastname)
         {
             Regex regex = new Regex(LASTNAME_REGEX);
             bool result = regex.IsMatch(lastname);
+            Console.WriteLine(result);
+        }
+        //UC3
+        //E-Mail validation
+        public const string EMAIL_REGEX = "^[a-z0-9]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}$";
+        public void ValidationEmail(string email)
+        {
+            Regex regex = new Regex(EMAIL_REGEX);
+            bool result = regex.IsMatch(email);
             Console.WriteLine(result);
         }
     }
