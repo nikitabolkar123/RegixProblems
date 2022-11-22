@@ -20,7 +20,10 @@ namespace UsersValidationProblem
             string email = Console.ReadLine();
             userValidation.ValidationFirstName(email);
 
+            Console.WriteLine("Enter PhoneNumber: ");
+            string phonenumber = Console.ReadLine();
+            userValidation.ValidationPhoneNumber(phonenumber);
+
         }
     }
-
 }

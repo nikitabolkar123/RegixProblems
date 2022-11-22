@@ -32,5 +32,14 @@ namespace UsersValidationProblem
             bool result = regex.IsMatch(email);
             Console.WriteLine(result);
         }
+        //UC4
+        // Pre define Mobile Format Validation
+        public const string MOBILENUMBER_REGEX = "^[0-9]+[\\s]+[0-9]{10}$";
+        public void ValidationPhoneNumber(string phonenumber)
+        {
+            Regex regex = new Regex(MOBILENUMBER_REGEX);
+            bool result = regex.IsMatch(phonenumber);
+            Console.WriteLine(result);
+        }
     }
 }
