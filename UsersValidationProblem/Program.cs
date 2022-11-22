@@ -11,7 +11,10 @@ namespace UsersValidationProblem
             Console.WriteLine("Enter The First Name: ");
             string firstname = Console.ReadLine();
             userValidation.ValidationFirstName(firstname);
+
+            Console.WriteLine("Enter The Last Name: ");
+            string lastname = Console.ReadLine();
+            userValidation.ValidationLastName(lastname);
         }
     }
 }
-        
