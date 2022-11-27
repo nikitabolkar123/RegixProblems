@@ -1,40 +1,45 @@
 ﻿using System;
 
-namespace UsersValidationProblem
+namespace UserRegistration
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
+            Console.WriteLine("enter your First Name:");
+            string Fname = Console.ReadLine();
+
             UserValidation userValidation = new UserValidation();
-            Console.WriteLine("Enter The First Name: ");
-            string firstname = Console.ReadLine();
-            userValidation.ValidationFirstName(firstname);
+            userValidation.ValidatateFirstName(Fname);
 
-            Console.WriteLine("Enter The Last Name: ");
-            string lastname = Console.ReadLine();
-            userValidation.ValidationLastName(lastname);
+            Console.WriteLine("enter your Last Name:");
+            string Lname = Console.ReadLine();
+            userValidation.ValidatateLastName(Lname);
 
-            Console.WriteLine("Enter Email: ");
+            Console.WriteLine("Enter your Email: ");
             string email = Console.ReadLine();
-            userValidation.ValidationFirstName(email);
+            userValidation.ValidateEmail(email);
 
             Console.WriteLine("Enter PhoneNumber: ");
             string phonenumber = Console.ReadLine();
-            userValidation.ValidationPhoneNumber(phonenumber);
+            userValidation.ValidatePhoneNumber(phonenumber);
 
             Console.WriteLine("Enter password 8 characters");
             string password = Console.ReadLine();
-            userValidation.ValidationPassword(password);
+            userValidation.ValidatePassword(password);
 
             Console.WriteLine("Enter password 1 uppercase");
             string Uppercase = Console.ReadLine();
-            userValidation.ValidationUppercase(Uppercase);
+            userValidation.ValidateUppercase(Uppercase);
 
             Console.WriteLine("Enter 1 numeric password");
             string numericpassword = Console.ReadLine();
-            userValidation.ValidationNumericPassword(numericpassword);
+            userValidation.ValidateNumericPassword(numericpassword);
+
+            Console.WriteLine("Enter 1 special password");
+            string specialChar = Console.ReadLine();
+            userValidation.ValidateSpecialCharPassword(specialChar);
         }
     }
 }
